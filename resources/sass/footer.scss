@@ -1,0 +1,190 @@
+/*FOOTER*/
+
+// Variables
+@import 'variables';
+footer {
+    background: $darkwhite;
+    color: #000;
+    width: 100%;
+    display: block;
+    margin: 0px auto 0px auto;
+    border-radius: 0px;
+    // border-top: 1px solid $grey;
+
+    #footerLogo {
+        fill: $darkgrey;
+
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            fill: $orange;
+        }
+    }
+
+    ul {
+        li {
+            line-height: 2;
+            a{
+                color: #5B5B5B;
+                font-size: 16px;
+                line-height: 19px;
+                transition-duration: 0.3s;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+    }
+
+
+    .footer-middle {
+        padding: 54px 100px 32px 100px;
+        @media(max-width: 1200px) {
+            padding: 54px 50px 32px 50px;
+            max-width: 100%;
+        }
+
+        // @media(max-width: 992px) {
+        //     padding: 20px;
+        // }
+
+        @media(max-width: 768px) {
+            padding: 54px 20px 32px 20px;
+        }
+
+        .row:first-of-type {
+            border-bottom: 1px solid $grey;
+            padding-bottom: 32px;
+
+            @media(max-width: 1200px) {
+                padding-bottom: 25px;
+            }
+
+            @media(max-width: 992px) {
+                padding-bottom: 20px;
+            }
+
+            @media(max-width: 768px) {
+                padding-bottom: 16px;
+            }
+
+
+            .logo {
+                max-width: 83px;
+                width: 100%;
+            }
+
+        }
+    }
+
+    .copy {
+        p {
+            color: #979797;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+
+    .job_opportunities {
+        p {
+            color: #979797;
+            font-size: 14px;
+            line-height: 17px;
+            float: right;
+            @media(max-width: 768px) {
+                float: none;
+            }
+        }
+    }
+
+
+    /*SOCIAL ICONS*/
+
+    /* footer social icons */
+
+    ul.social-network {
+        list-style: none;
+        display: inline;
+        margin-left: 0 !important;
+        padding: 0px 25px 0px 0px;
+
+        float: right;
+        @media(max-width: 768px) {
+            float: none;
+        }
+    }
+
+    ul.social-network li {
+        display: inline-block;
+        margin: 0 5px 5px 0px;
+    }
+
+
+    /* footer social icons */
+
+    .social-network a.icoFacebook:hover {
+        background-color: #3B5998;
+    }
+
+    .social-network a.icoInstagram:hover {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+
+    .social-network a.icoLinkedin:hover {
+        background-color: #007bb7;
+    }
+
+    .social-network a.icoInstagram:hover i,
+    .social-network a.icoFacebook:hover i,
+    .social-network a.icoLinkedin:hover i {
+        color: #fff;
+    }
+
+    .social-network a.socialIcon:hover,
+    .socialHoverClass {
+        color: #44BCDD;
+    }
+
+    .social-circle li a {
+        display: inline-block;
+        position: relative;
+        margin: 0 auto 0 auto;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        border: 1px solid $grey;
+    }
+
+    .social-circle li i {
+        margin: 0;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .social-circle i {
+        color: #595959;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .social-network a {
+        background-color: #F9F9F9;
+    }
+
+}
+
+
+

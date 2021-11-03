@@ -1,0 +1,1512 @@
+// Variables
+@import 'variables';
+
+// Schriftarten
+@font-face {
+    font-family: 'LabilGrotesk_Bold';
+    src:  url('/fonts/LabilGrotesk-Bold.woff2') format('woff2'),
+    url('/fonts/LabilGrotesk-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'LabilGrotesk_Italic';
+    src:  url('/fonts/LabilGrotesk-Italic.woff2') format('woff2'),
+    url('/fonts/LabilGrotesk-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'LabilGrotesk_Medium';
+    src:  url('/fonts/LabilGrotesk-Medium.woff2') format('woff2'),
+    url('/fonts/LabilGrotesk-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'LabilGrotesk_Regular';
+    src:  url('/fonts/LabilGrotesk-Regular.woff2') format('woff2'),
+    url('/fonts/LabilGrotesk-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'LabilGrotesk_Thin';
+    src:  url('/fonts/LabilGrotesk-Thin.woff2') format('woff2'),
+    url('/fonts/LabilGrotesk-Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'StabilGrotesk_Regular';
+    src:  url('/fonts/StabilGrotesk-Regular.woff2') format('woff2'),
+    url('/fonts/StabilGrotesk-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'StabilGrotesk_Medium';
+    src:  url('/fonts/StabilGrotesk-Medium.woff2') format('woff2'),
+    url('/fonts/StabilGrotesk-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'StabilGrotesk_Light';
+    src:  url('/fonts/StabilGrotesk-Light.woff2') format('woff2'),
+    url('/fonts/StabilGrotesk-Light.woff') format('woff');
+}
+
+body {
+    background-color: $darkwhite;
+
+    .shrinkToFit {
+        display: table !important;
+        margin: 0 auto !important;
+    }
+    #app1, #app2, #app3 {
+        width: 100%;
+        height: auto;
+        margin-right: 24px;
+    }
+
+    .input-group-text {
+        background-color: $darkwhite;
+    }
+    small, .small {
+        font-size: 14px !important;
+        font-weight: normal !important;
+        line-height: 17px !important;
+    }
+    img {
+        user-drag: none;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    h1, .h1 {
+        font-size: 40px;
+        line-height: 48px;
+        font-family: "StabilGrotesk_Medium", "Arial";
+
+        @media(max-width: 1200px) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        @media(max-width: 992px) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+
+    h2, .h2 {
+        font-size: 24px;
+        line-height: 29px;
+        font-family: "StabilGrotesk_Medium", "Arial";
+
+        @media(max-width: 1200px) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        @media(max-width: 992px) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+
+    h3, .h3 {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "StabilGrotesk_Medium", "Arial";
+
+        @media(max-width: 1200px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @media(max-width: 992px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    h4, .h4 {
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "StabilGrotesk_Medium", "Arial";
+
+        @media(max-width: 1200px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @media(max-width: 992px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "StabilGrotesk_Regular", "Arial";
+    }
+
+    textarea {
+        min-height: 75px !important;
+    }
+
+    // Bootstrap Pop Up Modal
+    .app-modal {
+        .a-btn-primary.update {
+            display: none !important;
+        }
+    }
+
+    .modal-dialog {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        margin: 0px;
+        box-shadow: 0px 0px 9px -4px #000;
+        border-radius: $border-radius;
+        max-height: 90vh;
+        max-width: 768px;
+    }
+
+    // Boxen gleich gross
+    .client {
+        padding-right: 88px;
+    }
+
+    .selfemployed {
+        padding-right: 64px;
+    }
+
+    // Fileupload Container
+    #editPortfolioContainer, #createJobContainer {
+        .filepond--panel-root {
+            background-color: $hover-bg-color !important;
+        }
+    }
+    // Fileupload Credits
+    .filepond--credits {
+        display: none !important;
+    }
+
+    // Fileupload Container
+    .filepond--drop-label {
+        cursor: pointer;
+        opacity: 1;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    // ausblenden sobald Mobile Ansicht
+    .hideOnMobile {
+        display: block;
+        @media(max-width: 768px) {
+            display: none !important;
+        }
+    }
+    // ausblenden sobald Tablet Ansicht
+    .hideOnTablet {
+        display: block;
+        @media(max-width: 992px) {
+            display: none !important;
+        }
+    }
+
+    // kein Rahmen Tablet Ansicht
+    .noBorderTablet {
+        border: inherit;
+        @media(max-width: 1200px) {
+            border: 0px !important;
+        }
+    }
+    // kein Rahmen Tablet Ansicht
+    .noBorderMobile {
+        border: inherit;
+        @media(max-width: 768px) {
+            border: 0px !important;
+        }
+    }
+
+    // einblenden sobald Mobile Ansicht
+    .showOnMobile {
+        display: none;
+        @media(max-width: 768px) {
+            display: block !important;
+        }
+    }
+
+    // einblenden sobald Tablet Ansicht
+    .showOnTablet {
+        display: block;
+        @media(max-width: 992px) {
+            display: none !important;
+        }
+    }
+
+    // Google Maps: Infos entfernen
+    a[href^="http://maps.google.com/maps"]{display:none !important}
+    a[href^="https://maps.google.com/maps"]{display:none !important}
+
+    .gmnoprint a, .gmnoprint span, .gm-style-cc {
+        display:none;
+    }
+    .gmnoprint div {
+        background:none !important;
+    }
+
+    // Elemente ausblenden (Erfolgrmeldungen, Pop Ups..)
+    #jobSuccess, #clientSuccess, #creatorSuccess, #creatorError, #contact, #categoryContact, .contactContainer, .creatorContent:not(:first-of-type), #uploadFeedback, #uploadFinalFail, #jobFinishSuccess {
+        display: none;
+    }
+
+    #finalDraftUploaded {
+        background-color: $darkwhite;
+        border-radius: 6px;
+        border: 1px solid #DDDDDD;
+        display: block;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #creatorsSkills {
+        display: none;
+    }
+
+    #noSkillsFound {
+        display: none;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    #skillsOutter {
+
+        #skillsContainer {
+            width: 100%;
+            display: block;
+
+            input[type=checkbox] {
+                visibility: hidden;
+                position: absolute;
+            }
+            label {
+                &.hidden {
+                    display: none !important;
+                }
+                .skill {
+                    cursor: pointer;
+                    padding: 3px 14px;
+                    border: 1px solid $black;
+                    margin: 0px 5px 5px 0px;
+                    border-radius: 8px;
+                    background-color: transparent;
+                    color: $black;
+
+                    &:hover {
+                        background-color: $black;
+                        color: $white;
+                    }
+
+                    &.selected {
+                        background-color: $black;
+                        color: $white;
+                    }
+
+                }
+            }
+        }
+    }
+    #location {
+        margin-top: 4px;
+    }
+    #locationInfo {
+        transition: all 0.5s ease-out;
+        overflow: hidden;
+        max-height: 0;
+
+        &.open {
+            max-height: 999px;
+        }
+    }
+
+    #advertiseNotice {
+        color: $orange;
+    }
+
+    .invalid-feedback {
+        display: inherit;
+    }
+
+    #image-feedback, #sva-feedback {
+        display: none;
+    }
+
+    // Creator Info (rechte Spalte)
+    #creatorInfo {
+        #creatorsHead .row {
+            display: flex;
+            align-items: center;
+
+            .creatorsImage {
+                max-width: 93px;
+                max-height: 93px;
+                width:100%;
+                height:100%;
+
+                img {
+                    width:100%;
+                    height:100%;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 99px;
+                }
+            }
+        }
+    }
+
+    // Portfolio vom Creator
+    #portfolioContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .portfolioItem{
+            flex: 0 0 49%;
+            border: 1px solid transparent;
+            border-radius: $border-radius;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            box-sizing: border-box;
+            height: 20vw;
+            margin-bottom: 2%;
+            position: relative;
+
+            img:not(.removePortfolioItem) {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 6px;
+                width: 100%;
+                height: 100%;
+            }
+
+            .removePortfolioItem {
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                border-radius: 26px;
+                background-color: $darkblack;
+                width: 30px;
+                height: 30px;
+                padding: 7px;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: $black;
+                }
+            }
+
+
+            &:hover {
+                border: 1px solid $grey;
+                background-color: #fbf8f8;
+            }
+        }
+    }
+
+    // Job Liste
+    #jobList, #creatorList {
+        a {
+            text-decoration: none !important;
+        }
+
+        .lastMinute {
+            position: absolute;
+            right: 4px;
+            top: 5px;
+            width: 22px;
+        }
+    }
+
+    // Bewerber im Portfolio (für Creator)
+    #applicantsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: normal;
+
+        .applicant{
+            flex: 0 0 16%;
+            @media(max-width: 1200px) {
+                flex: 0 0 24%;
+            }
+            @media(max-width: 768px) {
+                flex: 0 0 30%;
+            }
+            margin: 3px;
+            border: 1px solid $grey;
+            padding: 12px;
+            border-radius: $border-radius;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: transparent;
+            text-align: left;
+            max-width: 300px;
+
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            .applicantPicture {
+                box-sizing: border-box;
+                padding-bottom: 12px;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 6px;
+                }
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 17px;
+                display: block;
+                color: $darkgrey;
+                pointer-events: none;
+                text-align: center;
+            }
+
+            &:hover {
+                background-image: linear-gradient(126.75deg, #FF611E 6.79%, #DABCFF 81.34%);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+
+                span {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    // Job erstellen
+    #createJobContainer {
+        padding: 1rem;
+
+        box-sizing: border-box;
+        .row:not(:first-of-type) {
+            display: none;
+        }
+
+        i {
+            pointer-events: none;
+        }
+
+        .categoryBox,
+        .subcategoryBox, {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: normal;
+            gap: 5px;
+
+            .categoryBoxItem,
+            .subcategoryBoxItem {
+                flex: 0 1 calc(20% - 12px);
+                padding: 0px 10px;
+                @media(max-width: 1200px) {
+                    flex: 0 1 calc(25% - 12px);
+                }
+                @media(max-width: 992px) {
+                    flex: 0 1 calc(25% - 12px);
+                }
+                @media(max-width: 768px) {
+                    flex: 0 1 calc(33% - 12px);
+                }
+                @media(max-width: 520px) {
+                    flex: 0 1 calc(50% - 12px);
+                }
+                @media(max-width: 375px) {
+                    flex: 0 1 calc(100% - 12px);
+                }
+
+                border: 1px solid $grey;
+                border-radius: $border-radius;
+                cursor: pointer;
+                position: relative;
+
+                -webkit-transition: background-image 0.3s, border 0.3s;
+                -moz-transition: background-image 0.3s, border 0.3s;
+                -ms-transition: background-image 0.3s, border 0.3s;
+                -o-transition: background-image 0.3s, border 0.3s;
+                transition: background-image 0.3s, border 0.3s;
+
+                &.hidden {
+                    display: none !important;
+                }
+
+                img:not(.contact) {
+                    width: 30px;
+                    display: block;
+                    margin: 0 auto;
+                    padding: 50px 0px;
+                    box-sizing: border-box;
+                    pointer-events: none;
+                }
+
+                .icon {
+                    display: block;
+                }
+
+
+                .icon-selected {
+                    display: none !important;
+                }
+
+                .contact {
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                span {
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    display: block;
+                    color: $darkgrey;
+                    pointer-events: none;
+                    padding-bottom: 10px;
+                    @media(max-width: 768px) {
+                        padding-bottom: 20px;
+                    }
+
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+
+                &.selected {
+                    background-image: linear-gradient(126.75deg, #FF611E 6.79%, #DABCFF 81.34%);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    span {
+                        color: #FFF !important;
+                        font-family: "StabilGrotesk_Medium", "Arial" !important;
+                    }
+
+                    .icon {
+                        display: none;
+                    }
+
+                    .icon-selected {
+                        display: block !important;
+                    }
+                }
+
+                &:hover {
+                    background-image: linear-gradient(126.75deg, #FF611E 6.79%, #DABCFF 81.34%);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    border: 1px solid rgba(0, 0, 0, 0.05);
+                    span {
+                        color: #FFF !important;
+                    }
+
+                    .icon {
+                        display: none;
+                    }
+
+                    .icon-selected {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+
+        #chosenSpecifications, #specifications {
+            list-style-type: none;
+            border: 1px solid $darkgrey;
+            border-radius: $border-radius;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 187px;
+        }
+    }
+
+    // Klasse, welches Elemente beim fertigladen der Seite anzeigt mit jQuery
+    .showOnLoad {
+        opacity: 0;
+    }
+
+    // v-if Container ausblenden
+    [v-cloak]{
+        display: none !important;
+    }
+
+    // Loader-Balken ganz oben
+    #loader {
+        position: absolute;
+        top: 0;
+        background: linear-gradient(91.67deg, #FF9935 0%, #0099CB 100%);
+        height: 4px;
+        display: block;
+        z-index: 99;
+    }
+
+    // Graue Farbe
+    .color-grey {
+        color: #5B5B5B;
+    }
+
+    // Hauptcontainer
+    .mainContent {
+        width: 100%;
+        margin: 0 auto;
+        min-height: calc(100vh - 70px);
+        display: block;
+
+        // Job und Creator Einträge bei der Suche
+        .jobBox, .creatorBox {
+            background-color: $white;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            padding:0.5rem 1rem 0.7rem 1rem;
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid $grey;
+            color: $black;
+            text-decoration: none;
+
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            &:hover {
+                background-color: $hover-bg-color;
+                text-decoration: none;
+            }
+
+            .profileImages {
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                .profileImageOutter {
+                    width: 32px;
+                    height: 32px;
+                    display:inline-block;
+                    margin-right: -16px;
+                    background-color: $white;
+                    border-radius: 36px;
+                    border: 1px solid $grey;
+
+                    img {
+                        object-fit: cover;
+                        object-position: center;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 26px;
+                    }
+                }
+            }
+
+            .creatorImage {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 26px;
+            }
+
+            .jobDescription, .creatorDescription {
+                font-size: 12px;
+                line-height: 14px;
+                color: $lightgrey;
+            }
+        }
+
+        // Banner Element mit Hintergrundverlauf und gravy
+        .banner {
+            padding: 40px 56px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            width: 100%;
+            border-radius: $border-radius;
+            position: relative;
+            margin-bottom: 2.5rem;
+
+            @media(max-width: 1200px) {
+                padding: 20px 16px 25px 16px;
+            }
+
+            h1 {
+                color: $white;
+                margin-bottom: 25px;
+                font-feature-settings: "dlig", "ss01", "ss02", "ss03", "calt";
+            }
+
+            .button {
+                background-color: rgba(255, 255, 255, 0.3);
+                color: $white;
+                border-radius: $border-radius;
+                padding: 10px 40px;
+                text-decoration: none;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: $white;
+                    color: $darkblack;
+                }
+            }
+
+            // Banner schliessen
+            .close-banner {
+                cursor: pointer;
+                background-image: url("/images/icons/close-banner.png");
+                position: absolute;
+                top: 32px;
+                right: 32px;
+                background-size: 20px;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+                -webkit-transition: transform 0.3s ease-in-out;
+                -moz-transition: transform 0.3s ease-in-out;
+                -ms-transition: transform 0.3s ease-in-out;
+                -o-transition: transform 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out;
+
+                @media(max-width: 1200px) {
+                    top: 16px;
+                    right: 16px;
+                }
+
+                @media(max-width: 768px) {
+                    background-size: 15px;
+                    width: 15px;
+                    height: 15px;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        // Banner Variante grün / violet
+        .banner-green {
+            background-image: url("/images/backgrounds/bg-green.png");
+        }
+        // Banner Variante orange / blau
+        .banner-orange {
+            background-image: url("/images/backgrounds/bg-orange.png");
+        }
+
+        // Banner Variante blau
+        .banner-blue {
+            background-image: url("/images/backgrounds/bg-blue.png");
+        }
+
+        // Banner Variante pink
+        .banner-pink {
+            background-image: url("/images/backgrounds/bg-pink.png");
+        }
+
+        // Dashboard Activities
+        #dashboardActivities {
+            .row {
+                .col:first-of-type {
+                    padding-bottom: 77px;
+                    @media(max-width: 576px) {
+                        padding-bottom: 30px;
+                    }
+                }
+                img {
+                    @media(max-width: 576px) {
+                        width: 48px;
+                        height: 48px;
+                    }
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        opacity: 0.75;
+                    }
+                }
+
+                p {
+                    margin-bottom: 77px;
+                    @media(max-width: 576px) {
+                        margin-bottom: 45px;
+                    }
+                }
+
+                a {
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+
+                    color: $darkgrey;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+
+                .activityLine {
+                    width: 1px;
+                    background-color: $grey;
+                    padding-bottom: 999px;
+                    position: absolute;
+                    left: 27px;
+                    @media(max-width: 576px) {
+                        left: 24px;
+                    }
+                }
+            }
+            .row:last-child {
+                .col {
+                    .activityLine {
+                        display: none;
+                    }
+
+                    &:first-of-type {
+                        padding-bottom: 0px !important;
+                    }
+                }
+
+            }
+
+
+
+        }
+
+
+        // Klasse, um Element vertikal zu zentrieren für immer
+        .vertical-center-always {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .vertical-center {
+            @media(min-width: 1200px) {
+                min-height: calc(100vh - 134px); /* You might also want to use */
+            }
+
+            @media(min-width: 992px) {
+
+                min-height: 100%;  /* Fallback for vh unit */
+                min-height: calc(100vh - 120px); /* You might also want to use
+                        'height' property instead.
+
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+                /* Make it a flex container */
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+
+                /* Align the bootstrap's container vertically */
+                -webkit-box-align : center;
+                -webkit-align-items : center;
+                -moz-box-align : center;
+                -ms-flex-align : center;
+                align-items : center;
+
+                /* In legacy web browsers such as Firefox 9
+                   we need to specify the width of the flex container */
+                width: 100%;
+
+                /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+                   hence the bootstrap's container won't be aligned to the center anymore.
+
+                   Therefore, we should use the following declarations to get it centered again */
+                -webkit-box-pack : center;
+                -moz-box-pack : center;
+                -ms-flex-pack : center;
+                -webkit-justify-content : center;
+                justify-content : center;
+            }
+        }
+
+        #blockLeftInner, #blockRightInner {
+
+
+            a.link-underline {
+                color: $black;
+                text-decoration: underline;
+                font-size: 16px;
+                line-height: 21px;
+
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        // Linke Spalte
+        #blockLeft {
+            border-right: 1px solid $grey;
+            background-color: $white;
+
+            // Innerer Container der linken Spalte
+            #blockLeftInner {
+                min-height: calc(100vh - 70px);
+                padding: 32px;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                &.w-100 {
+                    max-width: 100% !important;
+                }
+
+                &.backgroundCarousel {
+                    background-image: url("/images/orange-bg.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-origin: content-box;
+                    background-clip: content-box;
+                    border-radius: 14px;
+                    padding: 0px !important;
+                    min-height: calc(100vh - 120px) !important;
+                    position: relative;
+
+                    @media(max-width: 992px) {
+                        height: 250px;
+                        border-radius: 14px;
+                        padding: 0px;
+                        min-height: auto !important;
+                        margin: 0px;
+                        width: 100% !important;
+                    }
+
+                    .carousel {
+                        padding: 10px;
+                        width: 100%;
+                        height: 100px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin: -60px 0 0 -50%;
+                        cursor: pointer;
+                        @media(max-width: 576px) {
+                            padding: 10px 30px;
+                            margin: -50px 0 0 -50%;
+                        }
+
+                        .slick-dots {
+                            left: 50%;
+                            transform: translateX(-50%);
+
+                            @media(max-width: 576px) {
+                                bottom: -70%;
+                            }
+                        }
+
+                        p {
+                            font-style: italic;
+                            font-weight: normal;
+                            font-size: 24px;
+                            line-height: 30px;
+                            color: #FFF;
+                            max-width: 466px;
+                            margin: 0 auto;
+                        }
+
+                        .slick-dots li.slick-active button::before,
+                        .slick-dots li button::before {
+                            color: $white !important;
+                        }
+                    }
+                }
+
+                @media(max-width: 1200px) {
+                    padding: 40px 25px;
+                    max-width: 100%;
+                }
+
+                @media(max-width: 992px) {
+                    padding: 40px 20px;
+                    min-height: 0px;
+                }
+
+                @media(max-width: 768px) {
+                    padding: 40px 16px;
+                }
+            }
+        }
+
+        // Rechte Spalte
+        #blockRight {
+            background-color: $darkwhite;
+
+            &:not(.notFixed){
+
+                overflow-y: auto;
+                z-index: 1;
+                @media(max-width: 992px) {
+                    overflow-y: auto;
+                }
+            }
+
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            @media(max-width: 992px) {
+                border-top: 1px solid $grey;
+                border-right: 0px solid $grey;
+            }
+
+            // Innerer Container der rechten Spalte
+            #blockRightInner {
+                padding: 32px;
+                -webkit-transition: opacity 1s ease-in-out;
+                -moz-transition: opacity 1s ease-in-out;
+                -ms-transition: opacity 1s ease-in-out;
+                -o-transition: opacity 1s ease-in-out;
+                transition: opacity 1s ease-in-out;
+                max-width: 850px;
+
+                @media(max-width: 1200px) {
+                    padding: 40px 25px;
+                    max-width: 100%;
+                }
+
+                @media(max-width: 992px) {
+                    padding: 40px 20px;
+                }
+
+                @media(max-width: 768px) {
+                    padding: 40px 16px;
+                }
+
+                .row {
+                    a {
+                        //color: $black;
+                        text-decoration: none !important;
+                    }
+                }
+
+                .specificationItem, .skillsItem {
+                    padding: 2px 9px;
+                    background-color: $darkwhite;
+                    border-radius: 6px;
+                    font-size: 12px;
+                    border: 1px solid $grey;
+                    margin: 0px 3px 3px 0px;
+                    display: inline-block;
+                }
+
+                #jobInfos {
+                    // Angehängte Files vom Job
+                    #jobFilesContainer {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .fileContainer {
+                            flex: 0 0 33.333333%;
+                            @media(max-width: 1200px) {
+                                flex: 0 0 50%;
+                            }
+
+                            .attached_file {
+                                border: 1px solid $grey;
+                                padding: 25px 22px;
+                                border-radius: $border-radius;
+                                cursor: pointer;
+                                margin:2px;
+                                height: calc(100% - 4px);
+
+                                img {
+                                    width: 35px;
+                                    height: 35px;
+                                    margin: 0 auto 10px auto;
+                                    display: table;
+                                }
+
+                                &:hover {
+                                    background-color:$hover-bg-color;
+                                }
+                            }
+                            span {
+                                display: block;
+                                font-size: 14px;
+                                text-align: center;
+                                word-break: break-word;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #fullpage {
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            padding: 3rem 16px;
+
+            @media(max-width: 768px) {
+                padding: 40px 16px;
+            }
+        }
+
+        //
+        #user-content {
+            #profilePicture {
+                display: inline-block;
+                max-width:35px;
+                max-height:35px;
+                width: auto;
+                height: auto;
+                border-radius: 26px;
+                object-fit: cover;
+                box-sizing: border-box;
+                object-position: center;
+            }
+        }
+
+        // City Hintergrund
+        &.cityBackground {
+            /* The image used */
+            background-image: url("http://localhost/index-background.gif");
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: calc(100vh - 358px);
+        }
+
+        // Passwort anzeigen - Auge
+        #showPassword {
+            cursor: pointer;
+            position: absolute;
+            right: -25px;
+            width: 20px;
+            top: 10px;
+        }
+
+        // Profil Upload Vorschau
+        #previewPicture {
+            height: 150px;
+            width: 150px;
+            display: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid lightgrey;
+            object-fit: cover;
+            object-position: center;
+        }
+        .light-modal-content {
+            background: #FFF !important;
+        }
+
+        .btn-primary {
+            background-color: $black;
+            border: 1px solid $black;
+            color: #FFF;
+
+            &:hover, &:active, &:focus {
+                background-color: black !important;
+                // color: $black !important;
+            }
+        }
+
+        .btn-outline-primary {
+            background-color: transparent;
+            border: 1px solid $black;
+            color: $black;
+
+            &:hover, &:active, &:focus {
+                background-color: $black !important;
+                color: #FFF !important;;
+            }
+        }
+
+        .btn-link {
+            color: $orange;
+
+            &:hover {
+
+                color: $blue;
+            }
+        }
+
+        .link-primary {
+            color: $orange;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Dark Mode
+body.dark-mode {
+    background-color: $black;
+
+
+    h1, h2, h3, h4, h5
+    .h1:not(a), .h2:not(a), .h3:not(a), .h4:not(a), .h5:not(a) {
+        color: $darkwhite;
+    }
+
+    a {
+        color: $orange;
+    }
+
+    nav ul li a {
+        color: $white;
+    }
+
+    label {
+        color: $white
+    }
+
+    p {
+        color: #9B9B9B;
+    }
+
+    #blockLeft, #blockRight, nav, .mainfooter {
+        background-color: $black;
+    }
+
+    .btn-primary, .btn-outline-primary {
+
+    }
+}
+
+#chat {
+    #chatContainer {
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 15px;
+        max-height: calc(100vh - 300px);
+
+
+        .message {
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+
+            .profileImage {
+                width: 100%;
+                box-sizing: border-box;
+
+                img {
+                    display: inline-block;
+                    border-radius: 99px;
+                    margin-left: 5px;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    box-sizing: border-box;
+                    width: 48px;
+                    height: 48px;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            p {
+                white-space: pre-line;
+                @media(max-width: 576px) {
+                    font-size: 14px;
+                }
+            }
+
+            .attached_file {
+                border: 1px solid #DDDDDD;
+                padding: 25px 22px;
+                border-radius: 8px;
+                cursor: pointer;
+                margin: 2px;
+                display: table;
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    margin: 0 auto 10px auto;
+                    display: table;
+                }
+
+                &:hover {
+                    background-color: $hover-bg-color;
+                }
+            }
+        }
+    }
+
+    textarea {
+        resize: none;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+        @media(max-width: 576px) {
+            width: 100%;
+            border-radius: 8px !important;
+        }
+    }
+    .file-uploads {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    #btn-chat, #btn-upload {
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid $grey;
+        background-color: $white;
+        height: 100%;
+        padding: 10px 15px;
+
+        &:hover {
+            background-color: $hover-bg-color;
+        }
+
+        img {
+            width: 25px;
+            height: auto;
+
+            @media(max-width: 576px) {
+                width: 20px;
+            }
+        }
+    }
+
+    #btn-chat {
+        border-radius: 1px 8px 8px 0px;
+    }
+
+    #btn-upload {
+        border-radius: 0px;
+        border-right: 0px;
+
+        @media(max-width: 576px) {
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+    }
+
+    .input-group-append {
+
+        @media(max-width: 576px) {
+            width: 100%;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+        div {
+            @media(max-width: 576px) {
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+    }
+}

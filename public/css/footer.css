@@ -1,0 +1,142 @@
+/*FOOTER*/
+footer {
+  background: #FCFCFC;
+  color: #000;
+  width: 100%;
+  display: block;
+  margin: 0px auto 0px auto;
+  border-radius: 0px;
+  /*SOCIAL ICONS*/
+  /* footer social icons */
+  /* footer social icons */
+}
+footer #footerLogo {
+  fill: #5B5B5B;
+  transition: all 0.3s ease-in-out;
+}
+footer #footerLogo:hover {
+  fill: #FE8252;
+}
+footer ul li {
+  line-height: 2;
+}
+footer ul li a {
+  color: #5B5B5B;
+  font-size: 16px;
+  line-height: 19px;
+  transition-duration: 0.3s;
+}
+footer ul li a:hover {
+  text-decoration: none;
+  color: #000;
+}
+footer .footer-middle {
+  padding: 54px 100px 32px 100px;
+}
+@media (max-width: 1200px) {
+  footer .footer-middle {
+    padding: 54px 50px 32px 50px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-middle {
+    padding: 54px 20px 32px 20px;
+  }
+}
+footer .footer-middle .row:first-of-type {
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 32px;
+}
+@media (max-width: 1200px) {
+  footer .footer-middle .row:first-of-type {
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 992px) {
+  footer .footer-middle .row:first-of-type {
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-middle .row:first-of-type {
+    padding-bottom: 16px;
+  }
+}
+footer .footer-middle .row:first-of-type .logo {
+  max-width: 83px;
+  width: 100%;
+}
+footer .copy p {
+  color: #979797;
+  font-size: 14px;
+  line-height: 17px;
+}
+footer .job_opportunities p {
+  color: #979797;
+  font-size: 14px;
+  line-height: 17px;
+  float: right;
+}
+@media (max-width: 768px) {
+  footer .job_opportunities p {
+    float: none;
+  }
+}
+footer ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0px 25px 0px 0px;
+  float: right;
+}
+@media (max-width: 768px) {
+  footer ul.social-network {
+    float: none;
+  }
+}
+footer ul.social-network li {
+  display: inline-block;
+  margin: 0 5px 5px 0px;
+}
+footer .social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+footer .social-network a.icoInstagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+footer .social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+footer .social-network a.icoInstagram:hover i,
+footer .social-network a.icoFacebook:hover i,
+footer .social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+footer .social-network a.socialIcon:hover,
+footer .socialHoverClass {
+  color: #44BCDD;
+}
+footer .social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  border: 1px solid #DDDDDD;
+}
+footer .social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+footer .social-circle i {
+  color: #595959;
+  transition: all 0.3s;
+}
+footer .social-network a {
+  background-color: #F9F9F9;
+}

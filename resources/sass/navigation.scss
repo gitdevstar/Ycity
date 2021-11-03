@@ -1,0 +1,603 @@
+/* Navi */
+
+// Variables
+@import 'variables';
+header {
+    height: 70px;
+    width: 100%;
+
+    @media(max-width: 768px) {
+        height: 60px;
+    }
+
+    // Navigation
+    nav {
+        transition: all 0.3s ease-in-out;
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        line-height: 60px;
+        height: 70px;
+        left: 0;
+        top: 0;
+        background-color: #fcfcfce0;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid $grey;
+        z-index: 99;
+
+        @media(max-width: 768px) {
+            height: 60px;
+            line-height: 54px;
+        }
+
+        #messagesDropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+
+        // Monile Menü Anpassungen
+        .mobileMenu {
+            position: absolute;
+            right: 16px;
+            top: 0px;
+            display: none;
+            @media(max-width: 768px) {
+                display: block;
+            }
+
+            #messagesContainer, #profileContainer {
+                display: inline-block;
+            }
+
+            #messagesDropdown {
+                margin-right: 12px;
+                @media(max-width: 768px) {
+                    margin-right: 24px;
+                }
+                @media(max-width: 330px) {
+                    margin-right: 12px;
+                }
+            }
+
+            a:not(.h4) {
+                transition: color 0.3s ease-in-out;
+                text-decoration: none;
+                color: #000;
+                font-size: 13px;
+                border-radius: 3px;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $orange;
+                }
+
+            }
+        }
+
+        // Menü
+        .menu {
+
+            ul {
+                transition: color 0.1s ease-in-out;
+                -webkit-transition: color 0.1s ease-in-out;
+                -ms-transition: color 0.1s ease-in-out;
+                line-height: 50px;
+                list-style: none;
+                background: rgba(0, 0, 0, 0);
+                color: #fff;
+                text-align: right;
+                margin: 0;
+                padding-right: 90px;
+                position: relative;
+                overflow: visible;
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                flex-wrap: wrap;
+
+                @media(max-width: 1200px) {
+                    padding-right: 65px;
+                }
+                @media(max-width: 992px) {
+                    padding-right: 40px;
+                }
+                @media(max-width: 768px) {
+                    border-bottom: 1px solid $grey;
+                    background-color: $darkwhite;
+                    max-height: 0vh;
+                    transition: all 0.6s ease;
+                    -webkit-transition: all 0.6s ease;
+                    -ms-transition: all 0.6s ease;
+                    padding-right: 0px;
+                    padding-left: 0px;
+                    overflow: hidden;
+                }
+
+                li {
+                    display: inline-block;
+                    padding: 10px 0;
+                    margin-left: 10px;
+
+                    @media(max-width: 768px) {
+                        box-sizing: border-box;
+                        width: 100%;
+                        text-align: center;
+                        border-bottom: 1px solid $grey;
+                        padding: 0px;
+                        margin-left: 0px;
+                    }
+
+                    &.lastChild {
+                        @media(max-width: 768px) {
+                            border-bottom: 0px;
+                        }
+                    }
+
+                    &.active{
+                        a {
+                            font-weight: bold !important;
+                        }
+                    }
+
+                    a {
+                        transition: all 0.1s ease-in-out;
+                        text-decoration: none;
+                        color: #2D2D2D;
+                        line-height: 30px;
+                        border-radius: 8px;
+                        font-family: "StabilGrotesk_Regular", "Arial";
+                        padding: 10px 16px;
+
+                        @media(max-width: 768px) {
+                            margin-bottom: 0px;
+                            display: block;
+                            padding: 10px 16px;
+                            text-align: left;
+                            border-radius: 0px;
+
+                            &:hover {
+                                background-color: $hover-bg-color;
+                            }
+                        }
+
+
+                        &:hover {
+                            text-decoration: none;
+                            color: #000;
+                            background: #00000010;
+
+                        }
+
+                    }
+                }
+                li.primary{
+                    float: right;
+                    padding: 10px 10px 0 16px;
+                    a{
+                        padding: 10px 32px;
+                        background: #2D2D2D;
+                        color: white;
+                        transition: .2s;
+                        display: block;
+                    }
+                    &:hover{
+                        a{
+                            padding: 10px 32px;
+                            background: #000;
+                            color: white;
+                            transform: scale(1.05);
+                            box-shadow: 0 10px 9px rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        #profileMenu {
+            .dropdown-item {
+                padding: 0px !important;
+                a,p {
+                    padding: 1rem 40px;
+                    @media(max-width: 768px) {
+                        padding: 0.7rem 20px;
+                    }
+                }
+            }
+        }
+        #messagesNavpoint {
+            margin-left: 2rem;
+        }
+
+        #messagesBubble {
+            display: none;
+            position: absolute;
+            top: 3px;
+            right: -8px;
+            background-color: $red;
+            border-radius: 36px;
+            font-size: 12px;
+            line-height: 12px;
+            padding: 3px 6px;
+            color: $white;
+
+            @media(max-width: 768px) {
+                top: 10px;
+            }
+        }
+
+        #messagesMenu {
+            padding: 16px 24px;
+
+            #popupActivities {
+                max-height: 415px;
+                overflow-y: scroll;
+                table {
+                    border-collapse: collapse;
+                    tr {
+                        border-bottom: 1px solid $grey;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        td {
+                            padding: 6px 0px 12px 0px;
+                            a {
+                                padding: 0px;
+                            }
+                            .unread {
+                                width: 10px;
+                                height: 10px;
+                                background-color: $orange;
+                                border-radius: 36px;
+                            }
+                        }
+                    }
+                }
+                img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        #bell-icon {
+            fill: $black;
+
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            &:hover,&.open, &:active, &:focus {
+                fill: $orange;
+            }
+        }
+
+        // Benutzer Dropdown
+        #dropdown-setting-link {
+            margin: 17px 17px 0px 0px;
+
+            #dropdown-setting-icon {
+                display: table;
+
+                &:hover {
+                    transform: rotate(-90deg);
+
+                    transition: all 0.3s ease-in-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -ms-transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+
+        #dropdown-profilePicture {
+            margin: 0 auto;
+            display: block;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            box-sizing: border-box;
+            border-radius: 99px;
+        }
+
+        #userType {
+            font-size: 14px;
+            line-height: 17px;
+            color: $lightgrey;
+        }
+
+        &.active {
+            a {
+                color: $orange;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+
+        // Drop Downs
+        .dropdown-menu.profile {
+            padding: 0px !important;
+        }
+
+        .dropdown-menu.profile, .dropdown-menu#messagesMenu {
+            width: 350px !important;
+            margin-top: 2rem;
+
+            @media(max-width: 768px) {
+                width: 330px !important;
+                top: 27px !important;
+                margin-top: 0.2rem;
+            }
+
+            @media(max-width: 500px) {
+                width: 310px !important;
+            }
+        }
+/*
+        .dropdown-menu.profile .dropdown-item {
+            padding: 1rem 40px;
+
+            @media(max-width: 768px) {
+                padding: 0.7rem 20px;
+            }
+        }
+*/
+        .dropdown-toggle::after {
+            display: none !important;
+        }
+
+        .dropdown-item {
+            a {
+                color: $black;
+                line-height: 40px;
+                @media(max-width: 768px) {
+                    line-height: 30px;
+                }
+            }
+            &.active {
+                background-color: $hover-bg-color;
+                a {
+                    color: $orange !important;
+
+                    &:hover {
+                        color: $orange;
+                        background-color: $hover-bg-color;
+                    }
+                }
+            }
+            &:hover, &:active {
+                background-color: $hover-bg-color;
+                a {
+                    color: $orange !important;
+                }
+            }
+        }
+
+        // Logo
+        .logo {
+            z-index: 3;
+            line-height: 66px;
+            position: fixed;
+            float: left;
+            margin: 0px 30px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 2px;
+            width: 112px;
+
+            @media(max-width: 1200px) {
+                margin: 0px 75px;
+            }
+            @media(max-width: 992px) {
+                position: fixed;
+                top: 0;
+                margin: 0px 40px;
+            }
+            @media(max-width: 768px) {
+                margin: 0px 16px;
+                width: 26px;
+                line-height: 54px;
+            }
+
+            // Desktop Logo
+            #desktopLogo {
+                width: 112px;
+                display: inherit;
+                height: auto;
+
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                path{
+                    fill: url(#yc-gradient);
+                }
+                defs{
+                    stop{
+                        transition: .3s;
+                    }
+
+                }
+                &:hover {
+                    path{
+                        fill: url(#yc-gradient);
+                    }
+                    defs{
+                        stop:first-child{
+                            stop-color: #FF9935;
+                        }
+                        stop:last-child{
+                            stop-color: #0099CB;
+                        }
+                    }
+                }
+
+                @media(max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            // Mobile Logo
+            #mobileLogo {
+                fill: $black;
+                width: 100%;
+                display: none;
+
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    fill: $orange;
+                }
+
+                @media(max-width: 768px) {
+                    display: inherit;
+                }
+            }
+        }
+
+        // For Creators Bild neben Logo
+        #for-creators {
+            z-index: 3;
+            line-height: 66px;
+            position: fixed;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 2px;
+            width: 112px;
+            margin: 27px 26px 27px 160px;
+
+            @media(max-width: 1200px) {
+                margin: 27px 26px 27px 146px;
+            }
+
+            @media(max-width: 768px) {
+                margin: 23px 0px 0px 55px;
+                top: 0px;
+                width: 92px;
+            }
+        }
+        #navbarDropdown {
+            background-color: transparent !important;
+        }
+
+        #profilePicture {
+            display: inline-block;
+            border-radius: 99px;
+            margin-left: 5px;
+            object-fit: cover;
+            box-sizing: border-box;
+            width:48px;
+            height:48px;
+            border: 1px solid transparent;
+            margin-top: -5px;
+
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            &:hover, &.open, &:active, &:focus {
+                border: 1px solid $orange;
+            }
+
+            @media(max-width: 768px) {
+                width:40px;
+                height:40px;
+                margin-top: 0px;
+            }
+        }
+
+        // Mobile Hamburger
+        .menu-icon {
+            line-height: 60px;
+            width: 100%;
+            text-align: right;
+            box-sizing: border-box;
+            padding: 15px 24px;
+            cursor: pointer;
+            color: $black;
+            display: none;
+
+            #mobilNavToggler {
+                fill: $black;
+                margin-top: -5px;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+
+            &:hover, &:active, &:focus {
+                #mobilNavToggler {
+                    fill: $orange;
+                }
+            }
+            &.open {
+                #mobilNavToggler {
+                    fill: $orange;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            @media(max-width: 768px) {
+                display: block;
+                padding: 0px 16px 0px 0px;
+            }
+
+            &.logged {
+                @media(max-width: 768px) {
+                    padding: 0px 146px 0px 0px;
+                }
+                @media(max-width: 330px) {
+                    padding: 0px 115px 0px 0px;
+                }
+            }
+
+
+        }
+    }
+
+}
+
+#blockRight {
+    // User Navi in der rechten Spalte unter Einstellungen
+    #userNavigation {
+        a {
+            color: $black;
+            text-decoration: none;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+
+            &.active {
+                font-family: "StabilGrotesk_Medium", "Arial";
+            }
+
+            &:hover {
+                font-family: "StabilGrotesk_Medium", "Arial";
+            }
+        }
+    }
+}
+
+
+
+
+

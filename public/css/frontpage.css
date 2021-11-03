@@ -1,0 +1,625 @@
+.mainContent {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+.section:not(#sectionSlider) {
+  padding: 0px 100px;
+}
+.section .sectionTitle {
+  font-size: 64px;
+  line-height: 77px;
+  font-feature-settings: "salt" on, "ss01" on;
+  max-width: 820px;
+  width: 100%;
+}
+.section .sectionText {
+  font-size: 32px;
+  line-height: 38px;
+  color: #646464;
+  max-width: 632px;
+  width: 100%;
+  font-style: italic;
+}
+
+#sectionProjects .row {
+  height: max(60vh, 90rem);
+}
+
+.circle {
+  position: absolute;
+  top: 20%;
+  left: 14%;
+  z-index: 0;
+}
+
+.circle-2 {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  z-index: 0;
+}
+
+.circle-3 {
+  width: 200px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  z-index: 0;
+}
+
+.triangle {
+  position: absolute;
+  top: 5%;
+  right: 26%;
+  z-index: 0;
+}
+
+.triangle-2 {
+  position: absolute;
+  top: -70%;
+  right: 55%;
+  z-index: 0;
+}
+
+.triangle-3 {
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  z-index: 0;
+}
+
+.rectangle {
+  position: absolute;
+  bottom: 10%;
+  right: 6%;
+  z-index: 0;
+}
+
+.rectangle-2 {
+  position: absolute;
+  bottom: -10%;
+  right: 0%;
+  z-index: 0;
+  width: 300px;
+}
+
+.rectangle-3 {
+  position: absolute;
+  bottom: 0%;
+  right: 80%;
+  z-index: 0;
+}
+
+#sectionHeader {
+  padding-top: 30px;
+  position: relative;
+}
+#sectionHeader #bannerTitle {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  transform: translateY(-50%);
+  max-width: 911px;
+  font-size: 128px;
+  line-height: 128px;
+  font-feature-settings: "ss01" on;
+  text-align: right;
+  z-index: 1;
+  letter-spacing: 3px;
+}
+#sectionHeader #bannerText {
+  left: 7%;
+  text-align: left;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+  max-width: 636px;
+  font-style: italic;
+  margin: 3em 0 2em;
+}
+#sectionHeader .project-selection {
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+  height: 70vh;
+  min-height: max(40rem, 100vh - 170px);
+}
+#sectionHeader .project-selection h1 {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  max-width: 850px;
+  font-size: 128px;
+  line-height: 128px;
+  font-feature-settings: "ss01" on;
+  text-align: right;
+  z-index: 1;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 0 100px;
+  padding-left: 10%;
+}
+#sectionHeader .project-selection h1 span {
+  border-bottom: solid 5px rgba(255, 255, 255, 0.5);
+}
+#sectionHeader .project-selection video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+#sectionHeader .project-selection .quickstart {
+  position: absolute;
+  bottom: 32px;
+  left: 10%;
+  right: 10%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: 70px;
+  border-radius: 8px;
+}
+#sectionHeader .project-selection .quickstart form {
+  height: 100%;
+}
+#sectionHeader .project-selection .quickstart input {
+  float: right;
+  background: #2D2D2D;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  border-radius: 8px;
+  margin: 12.5px;
+  transition: background 0.2s;
+}
+#sectionHeader .project-selection .quickstart input:hover {
+  background: black;
+}
+#sectionHeader .project-selection .quickstart select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 100%;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0 64px 0 32px;
+  border-radius: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+}
+
+#sectionSlider {
+  overflow-x: hidden;
+}
+#sectionSlider #carousel {
+  margin: 50px 0px;
+}
+#sectionSlider #carousel .carousel-element {
+  background-color: #F8F8F8;
+  border-radius: 16px;
+  display: table;
+  padding: 40px 68px;
+  width: auto;
+  margin: 0px 20px;
+}
+#sectionSlider #carousel .carousel-element .carousel-element-inner {
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+}
+#sectionSlider #carousel .carousel-element .carousel-element-inner img {
+  display: inline-block !important;
+  margin: -9px 20px 0px 0px;
+}
+
+.rellax {
+  pointer-events: none;
+}
+.rellax img {
+  width: 100%;
+}
+
+#sectionProjects div {
+  border-radius: 16px;
+}
+#sectionProjects .row {
+  height: 50vh;
+  min-height: 800px;
+}
+#sectionProjects .row .col-5:first-child .project {
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: -8px;
+}
+#sectionProjects .row .col-5:last-child .project:last-child {
+  margin-top: 16px;
+}
+#sectionProjects .row .col-5:last-child .project {
+  position: relative;
+  height: calc(50% - 8px);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#sectionProjects .row .imageDescription {
+  position: absolute;
+  bottom: 0px;
+  height: auto;
+  background-color: white;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 17px;
+  width: calc(100% - 32px);
+  display: block;
+}
+#sectionProjects .row .imageDescription p {
+  margin-bottom: 0px;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 29px;
+}
+#sectionProjects .row .project {
+  height: 100%;
+  overflow: hidden;
+}
+#sectionProjects .row .project video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#sectionVideo {
+  width: 100%;
+}
+#sectionVideo #videoContainer {
+  position: relative;
+}
+#sectionVideo #videoContainer #playButton {
+  top: -5rem;
+  right: -5rem;
+  position: absolute;
+  z-index: 1;
+  width: 218px;
+}
+#sectionVideo #videoContainer #video {
+  border-radius: 16px;
+}
+
+.plyr__poster {
+  background-size: cover !important;
+}
+
+.plyr--video {
+  border-radius: 16px !important;
+}
+
+.plyr__video-wrapper, .plyr__poster, .plyr--video {
+  background-color: transparent !important;
+}
+
+button.plyr__control.plyr__control--overlaid {
+  background: transparent;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+  font-feature-settings: "salt" on, "ss01" on;
+  color: #000;
+}
+
+button.plyr__control.plyr__control--overlaid:hover {
+  background: transparent;
+}
+
+#sectionQuotes #quote {
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -0.01em;
+  max-width: 870px;
+  font-style: italic;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+#sectionQuotes #quote #quoteTeller {
+  font-size: 24px;
+  line-height: 29px;
+  color: #646464;
+  display: block;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+#sectionTutorial h1 {
+  font-size: 80px;
+  line-height: 96px;
+  text-align: center;
+}
+#sectionTutorial .col-5:first-child {
+  position: relative;
+}
+#sectionTutorial .tutorial img {
+  width: 100%;
+}
+#sectionTutorial .tutorial .tutImgRight {
+  margin-left: 100px;
+}
+#sectionTutorial .tutorial .tutImgLeft {
+  margin-left: -100px;
+}
+#sectionTutorial .tutorial .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#sectionTutorial .tutorial .btn {
+  font-size: 24px;
+  padding: 16px 48px;
+  margin: 3em auto;
+}
+#sectionTutorial .tutorial .tutorialText {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+}
+#sectionTutorial .tutorial .tutorialText h3 {
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+}
+#sectionTutorial .tutorial .tutorialText p {
+  font-size: 24px;
+  line-height: 29px;
+  color: #646464;
+}
+
+#sectionSafety {
+  padding-top: 30px;
+}
+#sectionSafety #safetyContainer {
+  background: #F2F2F2;
+  border-radius: 16px;
+  padding: 64px 86px;
+}
+#sectionSafety #safetyContainer h2 {
+  font-size: 48px;
+  line-height: 58px;
+}
+#sectionSafety #safetyContainer p {
+  font-size: 24px;
+  line-height: 29px;
+  color: #646464;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .section:not(#sectionSlider) {
+    padding: 0px 75px;
+  }
+
+  #sectionHeader .project-selection .quickstart {
+    left: 5%;
+    right: 5%;
+  }
+  #sectionHeader .project-selection .quickstart select {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .section .sectionTitle {
+    font-size: 44px;
+    line-height: 47px;
+  }
+
+  .rellax.rectangle {
+    width: 100px;
+  }
+
+  #sectionProjects .row {
+    min-height: 400px;
+  }
+
+  #sectionHeader #bannerTitle {
+    font-size: 80px;
+    line-height: 80px;
+  }
+  #sectionHeader #bannerText {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .section:not(#sectionSlider) {
+    padding: 0px 50px;
+  }
+
+  #sectionVideo #videoContainer #playButton {
+    top: -4rem;
+    right: -2rem;
+    width: 158px;
+  }
+
+  .carousel-element {
+    padding: 30px 48px;
+    margin: 0px 15px;
+  }
+  .carousel-element .carousel-element-inner {
+    font-size: 30px;
+  }
+  .carousel-element .carousel-element-inner img {
+    width: 35px;
+  }
+
+  .project-selection h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  #sectionTutorial h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  #sectionTutorial .tutorial .center {
+    position: unset;
+    transform: none;
+  }
+  #sectionTutorial .tutorial .tutImgLeft {
+    margin-left: -50px;
+  }
+  #sectionTutorial .tutorial .tutImgRight {
+    margin-left: 50px;
+  }
+
+  #sectionSafety #safetyContainer {
+    padding: 45px;
+  }
+
+  #sectionQuotes #quote {
+    font-size: 35px;
+    line-height: 38px;
+  }
+}
+@media (max-width: 768px) {
+  .section .sectionTitle {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  #sectionProjects .imageDescription p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  #sectionProjects .row {
+    min-height: 300px;
+  }
+
+  #sectionHeader .project-selection h1 {
+    top: 40%;
+    font-size: 72px;
+    line-height: 72px;
+  }
+  #sectionHeader .project-selection .quickstart select {
+    display: none;
+  }
+  #sectionHeader .project-selection .quickstart input {
+    width: calc(100% - 25px);
+    background: transparent;
+    color: black;
+  }
+  #sectionHeader .project-selection .quickstart input:hover {
+    background: transparent;
+  }
+  #sectionHeader #bannerTitle {
+    font-size: 65px;
+    line-height: 65px;
+    right: 5%;
+  }
+  #sectionHeader #bannerText {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  .section:not(#sectionSlider) {
+    padding: 0px 20px;
+  }
+
+  #sectionVideo #videoContainer #playButton {
+    top: -3rem;
+    right: -1rem;
+    width: 100px;
+  }
+
+  #sectionTutorial .tutorial .tutImgLeft {
+    margin-left: -20px;
+  }
+  #sectionTutorial .tutorial .tutImgRight {
+    margin-left: 20px;
+  }
+
+  .carousel-element {
+    padding: 20px 30px;
+    margin: 0px 10px;
+  }
+  .carousel-element .carousel-element-inner {
+    font-size: 26px;
+  }
+  .carousel-element .carousel-element-inner img {
+    width: 35px;
+  }
+
+  #sectionSafety #safetyContainer {
+    padding: 30px;
+  }
+
+  #sectionQuotes #quote {
+    font-size: 29px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .circle {
+    left: 5%;
+    top: 28%;
+    width: 270px;
+  }
+
+  .rectangle {
+    bottom: 25%;
+  }
+
+  #sectionHeader #bannerTitle {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  #sectionHeader #bannerText {
+    left: 0%;
+    padding: 0px 20px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .project-selection h1 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+
+  #sectionTutorial h1 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  #sectionTutorial .tutorial .tutorialText p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  #sectionTutorial .tutorial .tutorialText h3 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  #sectionQuotes #quote #quoteTeller {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #sectionProjects .project {
+    min-height: 50vh;
+    position: relative;
+  }
+}

@@ -1,0 +1,25 @@
+<?php
+return [
+    'edit_client' => 'Edit new client',
+    'no_clients' => 'No existing clients.',
+    'edit' => 'Edit',
+    'create_new_client' => 'Create new client',
+    'clients' => 'Clients',
+    'company' => 'Company',
+    'company_projects' => 'Company projects',
+    'company_name' => 'Company name',
+    'adress' => 'Adress',
+    'contact' => 'Contact',
+    'description' => 'Description',
+    'company_description' => 'Company description',
+    'streetNr' => 'Street & nr.',
+    'plz' => 'ZIP code',
+    'place' => 'Place',
+    'website' => 'Website URL',
+    'telephone' => 'Telephone number',
+    'email' => 'Email',
+    'create' => 'Create',
+    'back' => 'back',
+    'save' => 'save',
+];
+?>
